@@ -6,7 +6,7 @@ var port = 3000;
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res, next) {
-    res.sendFile('index.html', { root: path.join(__dirname, '/public') });
+    res.sendFile('index.html', { root: path.join(__dirname, '../public') });
 });
 
 app.get('/piano-data', function(req, res, next) {
