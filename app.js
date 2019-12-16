@@ -6,7 +6,12 @@ var port = 3000;
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res, next) {
-    res.send('Hello W0rlD.');
+    res.sendFile('index.html', { root: path.join(__dirname, '../public') });
+});
+
+app.get('/piano-data', function(req, res, next) {
+    console.log("A GET request was made to /piano-data.");
+    res.end();
 });
 
 app.post('/piano-data', function(req, res, next) {
