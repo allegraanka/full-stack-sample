@@ -23,4 +23,3 @@ app.post('/piano-data', function(req, res, next) {
 });
 
 app.listen(port, () => console.log(`App running on port ${port}`));
-
