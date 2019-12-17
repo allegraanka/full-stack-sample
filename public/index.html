@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Materialize CSS Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">        
     <title>full-stack-sample</title>
 </head>
 <body>
-    <h1>full stack sample</h1>
-    <p>sending webhooks here from highlights sandbox.</p>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Piano-Testing</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a id="loginBtn" class="waves-effect waves-white btn-flat">Sign In</a></li>
+            <li><a id="logoutBtn" class="waves-effect waves-white btn-flat">Sign Out</a></li>
+          </ul>
+        </div>
+    </nav>
 
+    <div class="container">
+        <h1>full stack piano testing</h1>
+        <p>full stack application running piano.</p>
+    </div>
+
+    <!-- Materialize CSS Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts.js"></script>
+
+    <!-- Piano Load Script -->
     <script>
         (function(src) {
             var a=document.createElement("script");
             a.type="text/javascript";
-            a.async=true;
-            a.src=src;
+            a.async=true;a.src=src;
             var b=document.getElementsByTagName("script")[0];
             b.parentNode.insertBefore(a,b)
         })("https://sandbox.tinypass.com/xbuilder/experience/load?aid=eBGQWilSFK");
