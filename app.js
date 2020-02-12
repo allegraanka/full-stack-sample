@@ -12,6 +12,11 @@ app.get('/', function(req, res, next) {
     res.sendFile('index.html', { root: path.join(__dirname, '../public') });
 });
 
+app.post('/piano-data', function(req, res) {
+    res.status(200).send({ success: 'true', message: 'data received'});
+    console.log(req.body);
+});
+
 app.post('/webhook/:data', function(req, res, next) {
     console.log('POST req received from piano...access being granted...')
     next()
