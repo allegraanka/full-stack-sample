@@ -13,16 +13,7 @@ app.get('/', function(req, res, next) {
 });
 
 app.post('/piano-data', function(req, res) {
-    res.status(200).send({ success: 'true', message: 'data received'});
-    console.log(req.body);
-});
-
-app.post('/webhook/:data', function(req, res, next) {
-    console.log('POST req received from piano...access being granted...')
-    next()
-}, function(req, res) {
-    var data = req.params;
-    res.status(200).send(data);
+    
 });
 
 app.listen(port, () => console.log(`App running on port ${port}`));
